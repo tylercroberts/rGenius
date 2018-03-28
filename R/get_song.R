@@ -1,5 +1,10 @@
+
+library(glue)
+library(dplyr)
+library(httr)
 library(readr)
 access_token <- read_lines("access_token.txt")[1]
+
 
 get_song <- function(song_id){
   r <- GET(glue("api.genius.com/songs/{song_id}"), 
