@@ -1,3 +1,7 @@
+library(glue)
+library(dplyr)
+library(httr)
+
 get_song <- function(song_id){
   r <- GET(glue("api.genius.com/songs/{song_id}"), 
            add_headers("Accept" =  "application/json",
