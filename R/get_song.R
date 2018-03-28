@@ -1,3 +1,6 @@
+library(readr)
+access_token <- read_lines("access_token.txt")[1]
+
 get_song <- function(song_id){
   r <- GET(glue("api.genius.com/songs/{song_id}"), 
            add_headers("Accept" =  "application/json",
@@ -21,3 +24,29 @@ get_song <- function(song_id){
   
   return(res)
 }
+
+get_songs <- function(song_title, n_per_page = 20){
+  r <- GET(glue("api.genius.com/search?q={song_title}&per_page={n_per_page}"), 
+           add_headers("Accept" =  "application/json",
+                       "Host" = "api.genius.com",
+                       "Authorization" = glue("Bearer {access_token}")))
+  songs <- content(r, "parsed")
+  
+  get_field <- function(field) {
+    if (is.null(field)) return(NaN)
+    return(field)
+  }
+  
+  res <- data.frame("song_id"=NULL, 
+                    "title"=NULL,
+                    "artist_id"=NULL,
+                    "artist"=NULL)
+  
+  ids <- lapply(songs$response$hits, function(x) x$result$id)
+
+  for (id in ids) {
+    res <- rbind(res, get_song(id))
+  }
+  return(res)
+}
+get_songs("shake%20it%20off")
