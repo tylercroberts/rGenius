@@ -44,8 +44,10 @@ get_songs <- function(song_ids, access_token){
                     "transcribers" = NULL,
                     "concurrents" = NULL)
   
-  for(i in song_ids){
-    res <- rbind(res, get_song(i, access_token))
+  pb <- txtProgressBar(min=0, max=length(song_ids), initial=0)
+  for(i in 1:length(song_ids)){
+    res <- rbind(res, get_song(song_ids[i], access_token))
+    setTxtProgressBar(pb, i)
   }
   
   return(res)
