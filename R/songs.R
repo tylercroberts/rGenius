@@ -17,13 +17,37 @@ get_song <- function(song_id, access_token){
   res <- data.frame("id" = song_id,
                     "title" = get_field(song$response$song$title),
                     "artist" = get_field(song$response$song$album$artist$name),
+                    "featured_artists" = I(list(get_field(lapply(song$response$song$featured_artists, 
+                                                                 function(x) {return(x$name[1])})))),  
+                    # Black magic to add the list in as a single column properly. I() treats the object as-is
                     "album" = get_field(song$response$song$album$name),
                     "date" = get_field(song$response$song$release_date),
                     "views" = get_field(song$response$song$stats$pageviews),
                     "contributors" = get_field(song$response$song$stats$contributors),
                     "transcribers" = get_field(song$response$song$stats$transcribers),
                     "concurrents" = get_field(song$response$song$stats$concurrents))
+  
 
+  return(res)
+}
+#' @export
+get_songs <- function(song_ids, access_token){
+  
+  res <- data.frame("id" = NULL,
+                    "title" = NULL,
+                    "artist" = NULL,
+                    "featured_artists"=NULL
+                    "album" = NULL,
+                    "date" = NULL,
+                    "views" = NULL,
+                    "contributors" = NULL,
+                    "transcribers" = NULL,
+                    "concurrents" = NULL)
+  
+  for(i in song_ids){
+    res <- rbind(res, get_song(i, access_token))
+  }
+  
   return(res)
 }
 
@@ -44,7 +68,7 @@ search_song <- function(song_title, access_token, n_per_page = 20){
   ids <- lapply(songs$response$hits, function(x) x$result$id)
 
   for (id in ids) {
-    res <- rbind(res, get_song(id))
+    res <- rbind(res, get_song(id, access_token))
   }
   return(res)
 }
@@ -65,7 +89,7 @@ get_song_from_artists <- function(artist_name, access_token, n_per_page = 20){
   ids <- lapply(songs$response$hits, function(x) x$result$id)
 
   for (id in ids) {
-    res <- rbind(res, get_song(id))
+    res <- rbind(res, get_song(id, access_token))
   }
   return(res)
 }
