@@ -1,7 +1,7 @@
 source("R/utils.R")
 
 #' @export
-get_artist <- function(artist_id){
+get_artist <- function(artist_id. access_token){
   r <- GET(glue("api.genius.com/artists/{artist_id}"),
            add_headers("Accept" = "application/json", "Host" = "api.genius.com",
                        "Authorization" = glue("Bearer {access_token}")))
