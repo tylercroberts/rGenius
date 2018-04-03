@@ -41,7 +41,7 @@ devtools::install_github("tylercroberts/rGenius")
 
 
 
-## Contributing to rGenius [![Open Source Helpers](https://camo.githubusercontent.com/6332f3d9633f4d7fac6d388358c971829b9c8aff/68747470733a2f2f7777772e636f64657472696167652e636f6d2f70616e6461732d6465762f70616e6461732f6261646765732f75736572732e737667)](https://www.codetriage.com/)
+## Contributing to rGenius 
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome.
 
