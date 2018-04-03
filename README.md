@@ -5,9 +5,9 @@
 
 ## Overview
 
-[Genius](http://genius.com/) is a website that allows user to provide annotations and interpretation of song lyrics, news stories, sources, poetry, and documents.
+[Genius](http://genius.com/) is a website that allows users to provide annotations and interpretation of song lyrics, news stories, sources, poetry, and other documents.
 
-This R package is wrapping the Genius API ([here](https://genius.com/)) and provide some interesting data extraction.
+This R package wraps the Genius API ([here](https://genius.com/)) and provides some interesting data extraction.
 
 
 
@@ -19,8 +19,6 @@ Below are some functions that has been developed in the package:
 - `get_songs()`
 - `search_song()`
 - `get_artist()`
-
-
 - `get_song_from_artists()`
 
 ## Dependencies
@@ -49,7 +47,7 @@ All contributions, bug reports, bug fixes, documentation improvements, enhanceme
 
 A detailed overview on how to contribute can be found in the [**contributing guide.**](https://github.com/tylercroberts/rGenius/blob/master/CONTRIBUTING.md)
 
-If you are simply looking to start working with the rGenius, navigate to the [GitHub “issues” tab](https://github.com/tylercroberts/rGenius/issues) and start looking through interesting issues.
+If you are simply looking to start working with the rGenius, navigate to the [GitHub “issues” tab](https://github.com/tylercroberts/rGenius/issues) and start looking through any issues.
 
 Or maybe through using rGenius you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
 
