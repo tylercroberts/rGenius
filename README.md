@@ -25,10 +25,10 @@ Below are some functions that has been developed in the package:
 
 ## Dependencies
 
-- [dplyr](https://dplyr.tidyverse.org/)
-- [httr](https://github.com/r-lib/httr)
-- [readr](https://github.com/tidyverse/readr)
-- [glue](https://github.com/tidyverse/glue)
+- [dplyr](https://dplyr.tidyverse.org/): grammar of data manipulation
+- [httr](https://github.com/r-lib/httr): a friendly http package for R 
+- [readr](https://github.com/tidyverse/readr): Read flat files (csv, tsv, fwf) into R
+- [glue](https://github.com/tidyverse/glue): Glue strings to data in R. 
 
 
 
@@ -36,7 +36,10 @@ Below are some functions that has been developed in the package:
 
 To install the package, simply type the code below in the console:
 
-*Devtool install*
+```R
+devtools::load_all()
+devtools::install_github("tylercroberts/rGenius")
+```
 
 
 
@@ -50,3 +53,11 @@ If you are simply looking to start working with the rGenius, navigate to the [Gi
 
 Or maybe through using rGenius you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
 
+
+
+## Project contributors:
+
+1. [Tyler Roberts](https://github.com/tylercroberts/)
+2. [Maud Boucherit](https://github.com/MaudBoucherit) 
+3. [Duong Vu](https://github.com/DuongVu39)
+4. [Tariq Hassan](https://github.com/TariqAHassan)
