@@ -1,7 +1,47 @@
-# rGenius
+![](img/genius.png)
+
+<h1 align="center">
+  <br>
+rGenius
+<br>
+</h1>
+
+<h5 align="center">
+Created by</a></h5>
+
+<h4 align="center">
+
+[Tyler Roberts](https://github.com/tylercroberts/)
+[Maud Boucherit](https://github.com/MaudBoucherit) 
+[Duong Vu](https://github.com/DuongVu39)
+[Tariq Hassan](https://github.com/TariqAHassan)
+
+</a></h4>
+
+<br>
+<h4 align="center">
+
+
+
+<br>
+<h4 align="center">
 
 [![Build Status](https://travis-ci.org/tylercroberts/rGenius.svg?branch=master)](https://travis-ci.org/tylercroberts/rGenius)
 [![Coverage status](https://codecov.io/gh/tylercroberts/rGenius/branch/master/graph/badge.svg)](https://codecov.io/github/tylercroberts/rGenius?branch=master)
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+</a></h4>
+
+<h1></h1>
+<h4 align="center">
+  <a href="#main-features">Main Features</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+  <a href="#Dependencies">Dependencies</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+  <a href="#Installation">Installation</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;
+</h4>
+<h1></h1>
+
+<br>
 
 ## Overview
 
@@ -52,10 +92,3 @@ If you are simply looking to start working with the rGenius, navigate to the [Gi
 Or maybe through using rGenius you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
 
 
-
-## Project contributors:
-
-1. [Tyler Roberts](https://github.com/tylercroberts/)
-2. [Maud Boucherit](https://github.com/MaudBoucherit) 
-3. [Duong Vu](https://github.com/DuongVu39)
-4. [Tariq Hassan](https://github.com/TariqAHassan)
