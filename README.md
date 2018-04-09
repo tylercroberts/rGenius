@@ -1,7 +1,10 @@
-![](img/genius.png)
+
 
 <h1 align="center">
   <br>
+
+![](img/genius.png)
+
 rGenius
 <br>
 </h1>
@@ -11,11 +14,7 @@ Created by</a></h5>
 
 <h4 align="center">
 
-[Tyler Roberts](https://github.com/tylercroberts/)  &nbsp;&nbsp;&nbsp;•  
-
-[Maud Boucherit](https://github.com/MaudBoucherit)  &nbsp;&nbsp;&nbsp;•  
-[Duong Vu](https://github.com/DuongVu39) &nbsp;&nbsp;&nbsp;•  
-[Tariq Hassan](https://github.com/TariqAHassan) &nbsp;&nbsp;&nbsp;•  
+[Tyler Roberts](https://github.com/tylercroberts/)  •  [Maud Boucherit](https://github.com/MaudBoucherit)  •  [Duong Vu](https://github.com/DuongVu39) &nbsp;&nbsp;•  [Tariq Hassan](https://github.com/TariqAHassan) &nbsp;&nbsp;&nbsp;•  
 
 </a></h4>
 
