@@ -83,7 +83,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 #' @keywords internal
 .extract_ids <- function(songs){
     #' Harvest song ids from the yeild of
-    #' `content(r, "parsed")`, where R is a GET response.
+    #' `content(r, "parsed")`, where r is a GET response.
     ids <- lapply(songs$response$hits, function(x) x$result$id)
     return(ids)
 }
