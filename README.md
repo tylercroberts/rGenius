@@ -1,5 +1,3 @@
-
-
 <h1 align="center">
   <br>
 
@@ -14,7 +12,7 @@ Created by</a></h5>
 
 <h4 align="center">
 
-[Tyler Roberts](https://github.com/tylercroberts/)  •  [Maud Boucherit](https://github.com/MaudBoucherit)  •  [Duong Vu](https://github.com/DuongVu39) &nbsp;&nbsp;•  [Tariq Hassan](https://github.com/TariqAHassan) &nbsp;&nbsp;&nbsp;•  
+[Tyler Roberts](https://github.com/tylercroberts/)  •  [Maud Boucherit](https://github.com/MaudBoucherit)  •  [Duong Vu](https://github.com/DuongVu39) &nbsp;&nbsp;•  [Tariq Hassan](https://github.com/TariqAHassan) &nbsp;&nbsp;&nbsp;
 
 </a></h4>
 
@@ -34,7 +32,7 @@ Created by</a></h5>
 <h1></h1>
 
 <h4 align="center">
-  <a href="#main-features">Main Features</a> &nbsp;&nbsp;&nbsp;•  <a href="#Usage">Usage</a> &nbsp;&nbsp;&nbsp;•  <a href="#Dependencies">Dependencies</a> &nbsp;&nbsp;&nbsp;•  <a href="#Installation">Installation</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#main-features">Main Features</a> &nbsp;&nbsp;&nbsp;•  <a href="#Usage">Usage</a> &nbsp;&nbsp;&nbsp;•  <a href="#Dependencies">Dependencies</a> &nbsp;&nbsp;&nbsp;•  <a href="#Installation">Installation</a> &nbsp;&nbsp;&nbsp;
 
 </h4>
 <h1></h1>
@@ -83,9 +81,6 @@ Below are some functions that has been developed in the package:
 
   - Return a dataframe including all information
 
-    ​
-
-
 
 ## Usage
 
@@ -95,13 +90,10 @@ get_song_from_artists("kanye", access_token, 6)
 
 |      | id      | title                         | artist             |
 | ---- | ------- | ----------------------------- | ------------------ |
-| 1    | 70324   | Mercy                         | 2K Sports          |
-| 2    | 51899   | Niggas in Paris               | JAY-Z & Kanye West |
-| 3    | 2412669 | Father Stretch My Hands Pt. 1 | Kanye West         |
+| ...  | ...     | ...                           | ...                |
 | 4    | 87225   | Clique                        | G.O.O.D. Music     |
 | 5    | 2413549 | Ultralight Beam               | Kanye West         |
 | 6    | 158615  | Bound 2                       | Kanye West         |
-
 
 
 ## Dependencies
