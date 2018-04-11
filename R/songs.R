@@ -11,7 +11,8 @@ get_song <- function(song_id, access_token) {
     #' @param access_token :
     #'
     song <- .get_payload(
-      url=glue("api.genius.com/songs/{song_id}")
+      url=glue("api.genius.com/songs/{song_id}"),
+      access_token=access_token
     )
 
     res <- data.frame(
@@ -82,7 +83,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 
 #' @keywords internal
 .extract_ids <- function(songs){
-    #' Harvest song ids from the yeild of
+    #' Harvest song ids from the yield of
     #' `content(r, "parsed")`, where r is a GET response.
     ids <- lapply(songs$response$hits, function(x) x$result$id)
     return(ids)
@@ -97,7 +98,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
     #' @param access_token :
     #' @param verbose :
     #'
-    songs <- .get_payload(url=url)
+    songs <- .get_payload(url=url, access_token=access_token)
     # Expected columns: song_id, title, artist_id, artist.
     res <- .fetch_engine(
         res=data.frame(), itera=.extract_ids(songs),
