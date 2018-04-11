@@ -1,10 +1,13 @@
 Package: rGenius
-Title: What the Package Does (one line, title case)
+Title: R Wrapper for Genius API for music and annotations. 
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Authors@R: person("Duong", "Vu", email = "dqvu.ubc@gmail.com", role = c("aut", "cre")),
+    person("Maud", "Boucherit", email = "first.last@example.com", role = c("aut", "cre"))
+    person("Tariq", "Hassan", email = "first.last@example.com", role = c("aut", "cre"))
+    person("Tyler", "Roberts", email = "tcroberts@live.ca", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 Depends: R (>= 3.4.3)
-License: What license is it under?
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Suggests: knitr,
