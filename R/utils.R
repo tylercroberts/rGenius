@@ -32,7 +32,7 @@ get_field <- function(field) {
 }
 
 #' @keywords internal
-.get_payload <- function(url){
+.get_payload <- function(url, access_token){
     #' Get Payload from the Genius API.
     #'
     #' @param url : API URL for Genius.
