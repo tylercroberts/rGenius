@@ -18,4 +18,167 @@ knitr::opts_chunk$set(
 
 # Introduction
 
+Genius is a website that allows users to provide annotations and interpretation of song lyrics, news stories, sources, poetry, and other documents.
 
+This R package wraps the Genius API and provides some interesting data extraction.
+
+# **get_song()** 
+
+**Introduction**
+
+Search song by its ID number.
+
+**Function**
+
+```
+get_song(song_id, access_token)
+```
+
+**Parameters:**
+
+* **song_id**: ID of the song from Genius API
+
+* **access_token**: access_token from the Genius API 
+
+**Return:**
+
+* A dataframe including all information of the song:
+  * "id", "title","artist", "featured_artists", "album", "date", "views", "contributors", "transcribers", "concurrents"
+
+## Example
+
+```
+# access_token <- your_token
+get_song(12,access_token)
+```
+
+# **get_songs()** 
+
+**Introduction**
+
+Search several songs by their ID numbers.
+
+**Function**
+
+```
+get_songs(song_ids, access_token, verbose=TRUE)
+```
+
+**Parameters:**
+
+* **song_ids**: ID of the song from Genius API
+
+* **access_token**: access_token from the Genius API 
+
+* **verbose**: show progress bar if TRUE
+
+**Return:**
+
+* A dataframe including all information of these songs:
+  * "id", "title","artist", "featured_artists", "album", "date", "views", "contributors", "transcribers", "concurrents"
+
+## Example
+
+```
+# access_token <- your_token
+list_song <- c(12,13,14,15)
+get_songs(list_song,access_token,TRUE)
+```
+
+# **search_song()** 
+
+**Introduction**
+
+Search song by its name.
+
+**Function**
+
+```
+search_song(song_title, access_token,n_per_page=20, verbose=FALSE)
+```
+
+**Parameters:**
+
+* **song_title**: Name of the song
+
+* **access_token**: access_token from the Genius API 
+
+* **n_per_page**: Number of returned result page
+
+* **verbose**: show progress bar if TRUE
+
+**Return:**
+
+* A dataframe including all information of the song:
+  * "id", "title","artist", "featured_artists", "album", "date", "views", "contributors", "transcribers", "concurrents"
+
+## Example
+
+```
+# access_token <- your_token
+search_song("Today was a fairy tale",access_token,20,TRUE)
+```
+
+# **get_artist()** 
+
+**Introduction**
+
+Search artist social media info by ID.
+
+**Function**
+
+```
+get_artist(artist_id, access_token)
+```
+
+**Parameters:**
+
+* **artist_id**: ID from API Genius of the artist
+
+* **access_token**: access_token from the Genius API 
+
+**Return:**
+
+* A dataframe including all information of the artist social media info:
+  * "id", "alternate_name","facebook_name", "instagram_name", "twitter_name", "description"
+
+## Example
+
+```
+# access_token <- your_token
+get_artist(12,access_token)
+```
+
+# **get_song_from_artists()** 
+
+**Introduction**
+
+Search songs by artist name
+
+**Function**
+
+```
+get_song_from_artists(artist_name, access_token,n_per_page=20, verbose=FALSE)
+```
+
+**Parameters:**
+
+* **artist_name**: Artist name
+
+* **access_token**: access_token from the Genius API 
+
+* **n_per_page**: Number of returned result page
+
+* **verbose**: show progress bar if TRUE
+
+**Return:**
+
+* A dataframe including all information of the artist' social media info's song:
+  * "id", "title","artist", "featured_artists", "album", "date", "views", "contributors", "transcribers", "concurrents"
+
+## Example
+
+```
+# access_token <- your_token
+get_song_from_artists("kanye", access_token, 20)
+```
