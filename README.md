@@ -42,11 +42,13 @@ Created by</a></h5>
 
 This R package wraps the Genius API ([here](https://genius.com/)) and provides some interesting data extraction.
 
-
+Some examples of the packages:
 
 ![](img/kanye.png)
 
+Looking at Karry Perry popularity over time following her albums:
 
+![](img/katty.png)
 
 ## Main Features
 
