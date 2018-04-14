@@ -42,22 +42,26 @@ Created by</a></h5>
 
 This R package wraps the Genius API ([here](https://genius.com/)) and provides some interesting data extraction.
 
-Some examples of the packages:
+### Some examples of the package usage:
 
+Popularity of some of Kanye West's songs:   
 ![](img/kanye.png)
 
-Looking at Karry Perry popularity over time following her albums:
-
+Popularity of Karry Perry's albums over time:   
 ![](img/katty.png)
+
+Number of contributors to the lyrics by number of views for some rock songs:   
+![](img/rock.png)
+
 
 ## Main Features
 
 Below are some functions that has been developed in the package:
 
-- `get_song()`: 
+- `get_song()`:
 
   - Search song by its ID number.
-  - Return a dataframe including all information 
+  - Return a dataframe including all information
 
 - `get_songs()`
 
@@ -105,9 +109,9 @@ get_song_from_artists("kanye", access_token, 6)
 
 - [R](https://cran.r-project.org/) >= 3.4.3
 - [dplyr](https://dplyr.tidyverse.org/): grammar of data manipulation
-- [httr](https://github.com/r-lib/httr): a friendly http package for R 
+- [httr](https://github.com/r-lib/httr): a friendly http package for R
 - [readr](https://github.com/tidyverse/readr): Read flat files (csv, tsv, fwf) into R
-- [glue](https://github.com/tidyverse/glue): Glue strings to data in R. 
+- [glue](https://github.com/tidyverse/glue): Glue strings to data in R.
 
 
 
@@ -122,7 +126,7 @@ devtools::install_github("tylercroberts/rGenius")
 
 
 
-## Contributing to rGenius 
+## Contributing to rGenius
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome.
 
@@ -131,5 +135,3 @@ A detailed overview on how to contribute can be found in the [**contributing gui
 If you are simply looking to start working with the [rGenius](https://github.com/tylercroberts/rGenius), navigate to the [GitHub “issues” tab](https://github.com/tylercroberts/rGenius/issues) and start looking through any issues.
 
 Or maybe through using [rGenius](https://github.com/tylercroberts/rGenius) you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
-
-
