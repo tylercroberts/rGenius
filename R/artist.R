@@ -10,7 +10,7 @@ get_artist <- function(artist_id, access_token) {
     #' @param artist_id : ID from Genius API
     #' @param access_token : Access token obtain from Genius API
     #'
-    artist <- .get_payload(url=glue("api.genius.com/artists/{artist_id}"))
+    artist <- .get_payload(url=glue("api.genius.com/artists/{artist_id}"), access_token)
 
     res <- data.frame(
       "id" = artist_id,
