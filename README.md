@@ -1,5 +1,3 @@
-
-
 <h1 align="center">
   <br>
 
@@ -53,6 +51,7 @@ Popularity of Karry Perry's albums over time:
 Number of contributors to the lyrics by number of views for some rock songs:   
 ![](img/rock.png)
 
+Code for these above plots could be found in the [example folder](https://github.com/tylercroberts/rGenius/tree/master/examples)
 
 ## Main Features
 
@@ -90,21 +89,21 @@ Below are some functions that has been developed in the package:
 
 ## Usage
 
-```
-get_song_from_artists("taylor", access_token, 6)
-taytay %>% 
+```R
+elton <- get_song_from_artists("elton", access_token, 6)
+elton %>% 
   select(title, artist, date, views, album) %>% 
   head()
 ```
 
-|      | title                      | artist                       | date       | views   | album                                 |
-| ---- | -------------------------- | ---------------------------- | ---------- | ------- | ------------------------------------- |
-| 1    | Look What You Made Me Do   | Taylor Swift                 | 2017-08-25 | 1275737 | reputation                            |
-| 2    | End Game                   | Taylor Swift                 | 2017-11-10 | 1129164 | reputation                            |
-| 3    | ...Ready for It?           | Taylor Swift                 | 2017-09-03 | 990569  | reputation                            |
-| 4    | Bad Blood (Remix)          | NA                           | 2015-05-17 | 878209  | NA                                    |
-| 5    | I Don't Wanna Live Forever | NOW That's What I Call Music | 2016-12-09 | 764165  | NOW That's What I Call Music, Vol. 62 |
-| 6    | Blank Space                | Taylor Swift                 | 2014-11-10 | 778410  | 1989                                  |
+|      | title                                    | artist     | date       | views  | album                                    |
+| ---- | ---------------------------------------- | ---------- | ---------- | ------ | ---------------------------------------- |
+| 1    | Bennie and the Jets                      | Elton John | 1974-02-04 | 106362 | Goodbye Yellow Brick Road                |
+| 2    | Rocket Man (I Think It's Going to Be a Long, Long Time) | Elton John | 1972-04-14 | 140622 | Honky Château                            |
+| 3    | Tiny Dancer                              | Elton John | 1972-02-07 | 100702 | Madman Across the Water                  |
+| 4    | Goodbye Yellow Brick Road                | Elton John | 1973-10-05 | 52378  | Goodbye Yellow Brick Road                |
+| 5    | Can You Feel the Love Tonight (End Title) | Elton John | 1994-05-12 | 46823  | Rocket Man - The Definitive Hits (Australian Tour Edition 2011) |
+| 6    | Elton John                               | NA         | 2017-12-01 | 32719  | NA                                       |
 
 
 
