@@ -91,17 +91,20 @@ Below are some functions that has been developed in the package:
 ## Usage
 
 ```
-get_song_from_artists("kanye", access_token, 6)
+get_song_from_artists("taylor", access_token, 6)
+taytay %>% 
+  select(title, artist, date, views, album) %>% 
+  head()
 ```
 
-|      | id      | title                         | artist             |
-| ---- | ------- | ----------------------------- | ------------------ |
-| 1    | 70324   | Mercy                         | 2K Sports          |
-| 2    | 51899   | N$*****$ in Paris             | JAY-Z & Kanye West |
-| 3    | 2412669 | Father Stretch My Hands Pt. 1 | Kanye West         |
-| 4    | 87225   | Clique                        | G.O.O.D. Music     |
-| 5    | 2413549 | Ultralight Beam               | Kanye West         |
-| 6    | 158615  | Bound 2                       | Kanye West         |
+|      | title                      | artist                       | date       | views   | album                                 |
+| ---- | -------------------------- | ---------------------------- | ---------- | ------- | ------------------------------------- |
+| 1    | Look What You Made Me Do   | Taylor Swift                 | 2017-08-25 | 1275737 | reputation                            |
+| 2    | End Game                   | Taylor Swift                 | 2017-11-10 | 1129164 | reputation                            |
+| 3    | ...Ready for It?           | Taylor Swift                 | 2017-09-03 | 990569  | reputation                            |
+| 4    | Bad Blood (Remix)          | NA                           | 2015-05-17 | 878209  | NA                                    |
+| 5    | I Don't Wanna Live Forever | NOW That's What I Call Music | 2016-12-09 | 764165  | NOW That's What I Call Music, Vol. 62 |
+| 6    | Blank Space                | Taylor Swift                 | 2014-11-10 | 778410  | 1989                                  |
 
 
 
