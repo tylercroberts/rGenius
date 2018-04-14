@@ -1,5 +1,3 @@
-
-
 <h1 align="center">
   <br>
 
@@ -53,6 +51,7 @@ Popularity of Karry Perry's albums over time:
 Number of contributors to the lyrics by number of views for some rock songs:   
 ![](img/rock.png)
 
+Code for these above plots could be found in the [example folder](https://github.com/tylercroberts/rGenius/tree/master/examples)
 
 ## Main Features
 
@@ -90,18 +89,21 @@ Below are some functions that has been developed in the package:
 
 ## Usage
 
-```
-get_song_from_artists("kanye", access_token, 6)
+```R
+elton <- get_song_from_artists("elton", access_token, 6)
+elton %>% 
+  select(title, artist, date, views, album) %>% 
+  head()
 ```
 
-|      | id      | title                         | artist             |
-| ---- | ------- | ----------------------------- | ------------------ |
-| 1    | 70324   | Mercy                         | 2K Sports          |
-| 2    | 51899   | N$*****$ in Paris             | JAY-Z & Kanye West |
-| 3    | 2412669 | Father Stretch My Hands Pt. 1 | Kanye West         |
-| 4    | 87225   | Clique                        | G.O.O.D. Music     |
-| 5    | 2413549 | Ultralight Beam               | Kanye West         |
-| 6    | 158615  | Bound 2                       | Kanye West         |
+|      | title                                    | artist     | date       | views  | album                                    |
+| ---- | ---------------------------------------- | ---------- | ---------- | ------ | ---------------------------------------- |
+| 1    | Bennie and the Jets                      | Elton John | 1974-02-04 | 106362 | Goodbye Yellow Brick Road                |
+| 2    | Rocket Man (I Think It's Going to Be a Long, Long Time) | Elton John | 1972-04-14 | 140622 | Honky Château                            |
+| 3    | Tiny Dancer                              | Elton John | 1972-02-07 | 100702 | Madman Across the Water                  |
+| 4    | Goodbye Yellow Brick Road                | Elton John | 1973-10-05 | 52378  | Goodbye Yellow Brick Road                |
+| 5    | Can You Feel the Love Tonight (End Title) | Elton John | 1994-05-12 | 46823  | Rocket Man - The Definitive Hits (Australian Tour Edition 2011) |
+| 6    | Elton John                               | NA         | 2017-12-01 | 32719  | NA                                       |
 
 
 

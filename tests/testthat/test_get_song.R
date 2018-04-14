@@ -21,3 +21,14 @@ test_that(
 
 
 # ToDo: search_song()
+
+name <- "elton"
+
+test_that(
+  "get_song_from_artists() output is a list", {
+    expect_match(
+      class(get_song_from_artists(name, Sys.getenv("GENIUS_SECRET"))),
+      "data.frame"
+    )
+  })
+
