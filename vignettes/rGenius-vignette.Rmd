@@ -196,7 +196,7 @@ query_df %>%
     kable()
 ```
 
-### Name Recognition
+## Name Recognition
 
 ### `get_artist()`
 
@@ -321,7 +321,7 @@ katy %>%
   theme(legend.position="none")
 ```
 
-## Wrap Up
+## Wrap-Up
 
 In this vignette we've explored the `rGenius` package for R, which wraps the [Genius API](https://docs.genius.com). Specifically, we have walked through most of the major 
 use cases and have even used this package to generate a visualization for a contemporary pop artist.

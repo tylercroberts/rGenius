@@ -216,7 +216,7 @@ query_df %>%
 |   83812 | Bandz A Make Her Dance (Remix) | Juicy J            | 2012-09-11 |  531489 |
 |   74912 | Bandz A Make Her Dance         | Juicy J            | 2012-09-09 |  411801 |
 
-### Name Recognition
+## Name Recognition
 
 ### `get_artist()`
 
@@ -290,7 +290,7 @@ get_song_from_artists(
 |      id | title                     | artist | date       |   views |
 | ------: | :------------------------ | :----- | :--------- | ------: |
 | 2263723 | Hotline Bling             | Drake  | 2015-07-25 | 6123388 |
-| 3315890 | God’s Plan                | Drake  | 2018-01-20 | 5992673 |
+| 3315890 | God’s Plan                | Drake  | 2018-01-20 | 5993176 |
 | 2450584 | One Dance                 | Drake  | 2016-04-05 | 5499193 |
 |  200546 | Hold On, We’re Going Home | Drake  | 2013-08-07 | 5118739 |
 |  703654 | Know Yourself             | Drake  | 2015-02-13 | 4672591 |
@@ -361,7 +361,7 @@ katy %>%
 
 <img src="rGenius-vignette_files/figure-gfm/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
-## Wrap Up
+## Wrap-Up
 
 In this vignette we’ve explored the `rGenius` package for R, which wraps
 the [Genius API](https://docs.genius.com). Specifically, we have walked
