@@ -55,10 +55,10 @@ get_field <- function(field) {
 .get_payload <- function(url, access_token){
     r <- httr::GET(
       url,
-      add_headers(
+      httr::add_headers(
         "Accept" = "application/json",
         "Host" = "api.genius.com",
-        "Authorization" = glue("Bearer {access_token}")
+        "Authorization" = glue::glue("Bearer {access_token}")
       )
     )
     out <- httr::content(r, "parsed")

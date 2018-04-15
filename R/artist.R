@@ -26,7 +26,7 @@ source("R/utils.R")
 #' @export
 get_artist <- function(artist_id, access_token) {
     artist <- .get_payload(
-      url=glue("api.genius.com/artists/{artist_id}"),
+      url=glue::glue("api.genius.com/artists/{artist_id}"),
       access_token=access_token
     )
 
