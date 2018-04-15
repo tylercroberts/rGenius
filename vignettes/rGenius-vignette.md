@@ -65,7 +65,7 @@ harvest information from the Genius API about a song by it’s ID number.
 
   - `access_token`: access\_token from the Genius API
 
-**Return:**
+**Return**:
 
   - A `data.frame` complete with the following columns:
       - id: the song’s ID on the Genius API
@@ -179,7 +179,7 @@ search for song names in a human-friendly way.
 
   - `verbose`: show progress bar if `TRUE`
 
-**Return:** This returns all of the same columns as `get_song()` and
+**Return**: This returns all of the same columns as `get_song()` and
 `get_songs()`.
 
 #### Example
@@ -230,7 +230,7 @@ well as their user names on social media platforms.
 
   - `access_token`: access\_token from the Genius API.
 
-**Return:**
+**Return**:
 
   - A dataframe including all information of the artist social media
     info:
@@ -270,7 +270,7 @@ makes this straightforward to do with `get_song_from_artists()`.
 
   - `verbose`: show progress bar if `TRUE`
 
-**Return:**: the same columns as `get_song()` and `get_songs()`.
+**Return**: the same columns as `get_song()` and `get_songs()`.
 
 #### Example
 
@@ -295,7 +295,7 @@ get_song_from_artists(
 |  200546 | Hold On, We’re Going Home | Drake  | 2013-08-07 | 5118739 |
 |  703654 | Know Yourself             | Drake  | 2015-02-13 | 4672591 |
 
-### Fast Forward
+## Fast Forward
 
 Above we’ve explored the basics of how to use `rGenius`. Here we’ll take
 a bigger step and use this package to build a visualization of Katy

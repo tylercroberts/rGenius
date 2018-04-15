@@ -70,7 +70,7 @@ by it's ID number.
 
 * `access_token`: access_token from the Genius API 
 
-**Return:**
+**Return**:
 
 * A `data.frame` complete with the following columns:
   * id: the song's ID on the Genius API
@@ -169,7 +169,7 @@ names in a human-friendly way.
 
 * `verbose`: show progress bar if `TRUE`
 
-**Return:** This returns all of the same columns as `get_song()` and `get_songs()`.
+**Return**: This returns all of the same columns as `get_song()` and `get_songs()`.
 
 #### Example
 
@@ -210,7 +210,7 @@ names on social media platforms.
 
 * `access_token`: access_token from the Genius API.
 
-**Return:**
+**Return**:
 
 * A dataframe including all information of the artist social media info:
     * `'id'`: the artist's ID on the Genius API
@@ -242,7 +242,7 @@ Finally, you may wish to search for song from a given artist.
 
 * `verbose`: show progress bar if `TRUE`
 
-**Return:**: the same columns as `get_song()` and `get_songs()`.
+**Return**: the same columns as `get_song()` and `get_songs()`.
 
 #### Example
 
@@ -259,7 +259,7 @@ get_song_from_artists(
 ```
 
 
-### Fast Forward
+## Fast Forward
 
 Above we've explored the basics of how to use `rGenius`.
 Here we'll take a bigger step and use this package to build
