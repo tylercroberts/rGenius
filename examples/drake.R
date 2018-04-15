@@ -29,12 +29,14 @@ drake_plot <-
     filter(artist == "Drake") %>%
     ggplot() +
     geom_point(aes(x=reorder(title, desc(views)),
-                   y=date, size=views), shape=1) +
+                   y=date, size=views/1e6), shape=1) +
     scale_size_continuous(labels = scales::comma) +
-    labs(x ="Song Title", y = "Time", size="Genius Views") +
+    labs(x ="Song Title", y = "Time", size="Genius\nViews\n(Millions)") +
     ggtitle("Drake Song Results from the Genius API") +
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
 
 
 # Save to a directory 'imgs'.

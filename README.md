@@ -36,15 +36,18 @@ This R package wraps the Genius API ([here](https://genius.com/)) and provides s
 ### Some examples of the package usage:
 
 Popularity of some of Drake songs:   
+
 ![](img/drake.png)
 
 Popularity of Karry Perry's albums over time:   
+
 ![](img/katy.png)
 
-Number of contributors to the lyrics by number of views for some rock songs:   
+Number of contributors to the lyrics by number of views for some rock songs:
+   
 ![](img/rock.png)
 
-Code for these above plots could be found in the [example folder](https://github.com/tylercroberts/rGenius/tree/master/examples)
+Code for these above plots could be found in the [`/example`](https://github.com/tylercroberts/rGenius/tree/master/examples) folder.
 
 ## Main Features
 
