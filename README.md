@@ -39,7 +39,7 @@ Popularity of some Drake songs:
 
 ![](img/drake.png)
 
-Popularity of Karry Perry's albums over time:   
+Popularity of Katy Perry's albums over time:   
 
 ![](img/katy.png)
 
