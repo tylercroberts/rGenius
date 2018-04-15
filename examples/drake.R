@@ -33,14 +33,14 @@ drake_plot <-
     scale_size_continuous(labels = scales::comma) +
     labs(x ="Song Title", y = "Time", size="Genius\nViews\n(Millions)") +
     ggtitle("Drake Song Results from the Genius API") +
-    theme_minimal() +
+    theme_minimal(base_size = 8) +
     theme(
         axis.text.x = element_text(angle = 45, hjust = 1)
     )
 
 
-# Save to a directory 'imgs'.
+## Save
 ggsave(
-    "imgs/drake.png", plot=drake_plot,
-    dpi=300, width=5.5, height=4, units="in"
+    "drake.png", plot=drake_plot,
+    dpi=225, width=5.5, height=4, units="in"
 )

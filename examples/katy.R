@@ -51,11 +51,11 @@ katy_plot <-
     scale_x_date(date_labels = "%b-%Y") +
     labs(x="\nDate", y="Views (Millions)") +
     ggtitle("Our Favorite Katy Perry Albums", subtitle="Rise and Fall") +
-    theme_minimal() +
+    theme_minimal(base_size = 8) +
     theme(legend.position="none")
 
-# Save to a directory 'imgs'.
+## Save
 ggsave(
-    "imgs/katy.png", plot=katy_plot,
+    "katy.png", plot=katy_plot,
     dpi=225, width=5.5, height=4, units="in"
 )
