@@ -79,7 +79,7 @@ Below are some functions that has been developed in the package:
 
 ## Usage
 
-```R
+```r
 elton <- get_song_from_artists("elton", access_token, 6)
 elton %>% 
   select(title, artist, date, views, album) %>% 
@@ -100,7 +100,7 @@ elton %>%
 
 To install the package, simply type the code below in the console:
 
-```R
+```r
 devtools::load_all()
 devtools::install_github("tylercroberts/rGenius")
 ```
