@@ -29,7 +29,7 @@ for all songs in song_ids. Columns:
   \item{album}{the song's album}
   \item{date}{the song's released date}
   \item{views}{the number of views for this song on the Genius website}
-  \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+  \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 }

@@ -20,7 +20,6 @@ a DataFrame of information about an Artist. Columns:
  \item{facebook_name}{the artist's name on facebook, if provided on the API}
  \item{instagram_name}{the artist's name on instagram, if provided on the API}
  \item{twitter_name}{the artist's name on twitter, if provided on the API}
- \item{description}{a descriptioon of the artist}
 }
 }
 \description{

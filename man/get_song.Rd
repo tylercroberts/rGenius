@@ -23,7 +23,7 @@ A DataFrame with information about a song. Columns:
   \item{album}{the song's album}
   \item{date}{the song's released date}
   \item{views}{the number of views for this song on the Genius website}
-  \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+  \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 }
@@ -36,7 +36,7 @@ about a single song.
 \dontrun{
 library(rGenius)
 
-## A Single song IDs:
+## A Single song ID:
 get_song(8439, access_token=YOUR_TOKEN_GOES_HERE)
 }
 
