@@ -3,14 +3,32 @@
 source("R/utils.R")
 
 
+#' Get Artist Information
+#'
+#' @description This function returns information from the
+#' Genius API about an artist, given this artist's ID on the API.
+#'
+#' @param artist_id an artist's ID on the Genius API
+#'
+#' @param access_token the user's (your) access token to the Genius API. For more detail about how to get it, see section Details
+#'
+#' @return a DataFrame of information about an Artist. Columns:
+#'
+#' \describe{
+#'  \item{id}{the artist's ID on the Genius API}
+#'  \item{alternate_name}{the artist's name}
+#'  \item{facebook_name}{the artist's name on facebook, if provided on the API}
+#'  \item{instagram_name}{the artist's name on instagram, if provided on the API}
+#'  \item{twitter_name}{the artist's name on twitter, if provided on the API}
+#'  \item{description}{a descriptioon of the artist}
+#' }
+#'
 #' @export
 get_artist <- function(artist_id, access_token) {
-    #' Get Artist.
-    #'
-    #' @param artist_id : ID from Genius API
-    #' @param access_token : Access token obtain from Genius API
-    #'
-    artist <- .get_payload(url=glue("api.genius.com/artists/{artist_id}"), access_token)
+    artist <- .get_payload(
+      url=glue("api.genius.com/artists/{artist_id}"),
+      access_token=access_token
+    )
 
     res <- data.frame(
       "id" = artist_id,
