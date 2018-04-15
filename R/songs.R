@@ -33,7 +33,7 @@ source("R/utils.R")
 #' \dontrun{
 #' library(rGenius)
 #'
-#' ## A Single song IDs:
+#' ## A Single song ID:
 #' get_song(8439, access_token=YOUR_TOKEN_GOES_HERE)
 #' }
 #'
@@ -91,6 +91,10 @@ get_song <- function(song_id, access_token) {
 #' @keywords internal
 #' @noRd
 .fetch_engine <- function(res, itera, access_token, verbose){
+    if (length(itera) < 1){
+        stop("No Results!")
+    }
+
     if (verbose){
         pb <- utils::txtProgressBar(min=0, max=length(itera), initial=0)
     }
