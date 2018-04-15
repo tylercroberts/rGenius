@@ -36,7 +36,7 @@ your access token (a character string) to an objected entitled
 `access_token`. That is,
 
 ``` r
-access_token <- "YOU ACCESS TOKEN HERE"
+access_token <- "YOUR ACCESS TOKEN HERE"
 ```
 
 Alternatively, you can create a simple `access_token.txt` file that
