@@ -3,7 +3,7 @@ library(rGenius)
 library(tidyverse)
 
 ## Note: a more detailed version of this code appears
-## in the /vignette directory.
+## in the /vignettes directory.
 
 
 ## Set the access token
@@ -30,6 +30,7 @@ katy <-
     album = str_trim(as.character(album))
 )
 
+
 ## Filter
 katy_p_favs <- c("Prism", "Witness")
 katy <-
@@ -53,6 +54,7 @@ katy_plot <-
     ggtitle("Our Favorite Katy Perry Albums", subtitle="Rise and Fall") +
     theme_minimal(base_size = 8) +
     theme(legend.position="none")
+
 
 ## Save
 ggsave(
