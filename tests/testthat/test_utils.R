@@ -13,4 +13,4 @@ test_that("get_field() returns NaN when passed NULL", {
 
 
 # Note: `.get_payload()` put through its paces
-# the functions in `R/artist` and `R/songs.R`.
+# by the functions in `R/artist.R` and `R/songs.R`.
