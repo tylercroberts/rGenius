@@ -2,8 +2,13 @@
 library(rGenius)
 library(tidyverse)
 
+## Note: a more detailed version of this code appears
+## in the /vignette directory.
+
+
 ## Set the access token
 access_token <- read_lines("access_token.txt")[1]
+
 
 ## Search and Download results for Katy Pery
 katy <- get_song_from_artists(
@@ -16,6 +21,7 @@ katy <- get_song_from_artists(
     ## we only get songs where the *main* artist was Katy Pery.
     filter(artist=="Katy Perry")
 
+
 ## Clean Data Types
 katy <-
   katy %>%
@@ -26,11 +32,11 @@ katy <-
 
 ## Filter
 katy_p_favs <- c("Prism", "Witness")
-
 katy <-
   katy %>%
   filter(album %in% katy_p_favs) %>%
   mutate(album = as.factor(album))
+
 
 ## Build Plot.
 katy_plot <-
@@ -48,5 +54,8 @@ katy_plot <-
     theme_minimal() +
     theme(legend.position="none")
 
-
-ggsave("imgs/katy.png", plot=katy_plot, dpi=300)
+# Save to a directory 'imgs'.
+ggsave(
+    "imgs/katy.png", plot=katy_plot,
+    dpi=225, width=5.5, height=4, units="in"
+)
