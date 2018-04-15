@@ -20,7 +20,6 @@ source("R/utils.R")
 #'  \item{facebook_name}{the artist's name on facebook, if provided on the API}
 #'  \item{instagram_name}{the artist's name on instagram, if provided on the API}
 #'  \item{twitter_name}{the artist's name on twitter, if provided on the API}
-#'  \item{description}{a descriptioon of the artist}
 #' }
 #'
 #' @examples
@@ -47,7 +46,6 @@ get_artist <- function(artist_id, access_token) {
       "facebook_name" = get_field(artist$response$artist$facebook_name),
       "instagram_name" = get_field(artist$response$artist$instagram_name),
       "twitter_name" = get_field(artist$response$artist$twitter_name),
-      "description" = get_field(artist$response$artist$description$dom$children[[1]][[2]][[1]])
     )
     return(res)
 }
