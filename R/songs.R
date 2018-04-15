@@ -28,6 +28,20 @@ source("R/utils.R")
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
 #'
+#'
+#' @examples
+#' \dontrun{
+#' library(rGenius)
+#'
+#' ## A Single song IDs:
+#' get_song(8439, access_token=YOUR_TOKEN_GOES_HERE)
+#'
+#' ## Multiple song IDs:
+#' get_songs(c(3846, 9869, 2273), access_token=YOUR_TOKEN_GOES_HERE)
+#' }
+#'
+#' @seealso \code{\link{get_artist}}, \code{\link{search_song}}, \code{\link{get_songs_from_artist}}
+#'
 #' @export
 get_song <- function(song_id, access_token) {
     song <- .get_payload(
@@ -179,7 +193,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 }
 
 
-#' Search and download results for a song.
+#' Search and Harvest Results (more than one possible) for a Song Title.
 #'
 #' @description Obtain information from the Genius API about an artist.
 #' There can be several songs returned if the name appears in several
@@ -211,6 +225,16 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
 #'
+#' @examples
+#' \dontrun{
+#' library(rGenius)
+#'
+#' ## Search for the song Europa.
+#' search_song("Europa", access_token=YOUR_TOKEN_GOES_HERE)
+#' }
+#'
+#' @seealso \code{\link{get_artist}}, \code{\link{get_song}}, \code{\link{get_songs}}, \code{\link{get_songs_from_artist}}
+#'
 #' @export
 search_song <- function(song_title, access_token,
                         n_per_page=20, verbose=FALSE) {
@@ -223,7 +247,7 @@ search_song <- function(song_title, access_token,
 }
 
 
-#' Get songs for an artist.
+#' Get Songs for an Artist.
 #'
 #' @description This function returns information from the Genius API
 #' about the top songs from an artist, given this artist name.
@@ -253,6 +277,16 @@ search_song <- function(song_title, access_token,
 #'   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
+#'
+#' @examples
+#' \dontrun{
+#' library(rGenius)
+#'
+#' ## Look up the band Metallica:
+#' get_songs_from_artist("Metallica", access_token=YOUR_TOKEN_GOES_HERE)
+#' }
+#'
+#' @seealso \code{\link{get_artist}}, \code{\link{search_song}}, \code{\link{get_song}}, \code{\link{get_songs}}
 #'
 #' @export
 get_song_from_artists <- function(artist_name, access_token,

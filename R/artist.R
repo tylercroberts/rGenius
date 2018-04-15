@@ -23,6 +23,17 @@ source("R/utils.R")
 #'  \item{description}{a descriptioon of the artist}
 #' }
 #'
+#' @examples
+#' \dontrun{
+#' library(rGenius)
+#'
+#' ## Get Carlos Santana's information
+#' get_artist(8439, access_token=YOUR_TOKEN_GOES_HERE)
+#'
+#' }
+#'
+#' @seealso \code{\link{get_song}}, \code{\link{get_songs}}, \code{\link{search_song}}, \code{\link{get_songs_from_artist}}.
+#'
 #' @export
 get_artist <- function(artist_id, access_token) {
     artist <- .get_payload(
