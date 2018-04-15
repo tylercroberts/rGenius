@@ -104,7 +104,7 @@ To install the package, simply type the code below in the console:
 devtools::load_all()
 devtools::install_github("tylercroberts/rGenius")
 ```
-    ​
+
 ## API Key
 
 To get an access token to the Genius API, go to this link: [genius.com/api-clients/new](https://genius.com/api-clients/new), and fill out the form. You only need to provide the name of your app and an app website (the app website can even be https://example.com). After saving, you can get the access token by clicking on "Generate Access Token". 
