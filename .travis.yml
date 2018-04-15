@@ -13,3 +13,18 @@ after_success:
   - Rscript -e 'lintr::lint_package()'
 env:
   LINTR_COMMENT_BOT=false
+
+matrix:
+  include:
+    - os: osx  ## Souce: https://github.com/HenrikBengtsson/illuminaio
+      r: oldrel
+      latex: false
+      r_build_args: --no-build-vignettes  ## WORKAROUND: sectsty.sty missing
+      r_check_args: --as-cran --no-build-vignettes --no-vignettes
+      env: NB='w/out vignettes' ## Just a label
+    - os: osx
+      r: release
+      latex: false
+      r_build_args: --no-build-vignettes  ## WORKAROUND: sectsty.sty missing
+      r_check_args: --as-cran --ignore-vignettes
+      env: NB='w/out vignettes' ## Just a label
