@@ -17,26 +17,27 @@ drake <- get_song_from_artists(
 
 ## Scatter plot of the data
 drake_plot <-
-    drake %>%
-    mutate(
-      date = as.Date(date),
-      title = as.character(title),
-      title = ifelse(str_detect(title, pattern = "Cake /"), "Pound Cake", title),
-      title = as.factor(title)
-    ) %>%
-    # Limit to songs where the
-    # main artist was, in fact, Drake.
-    filter(artist == "Drake") %>%
-    ggplot() +
-    geom_point(aes(x=reorder(title, desc(views)),
-                   y=date, size=views/1e6), shape=1) +
-    scale_size_continuous(labels = scales::comma) +
-    labs(x ="Song Title", y = "Time", size="Genius\nViews\n(Millions)") +
-    ggtitle("Drake Song Results from the Genius API") +
-    theme_minimal(base_size = 8) +
-    theme(
-        axis.text.x = element_text(angle = 45, hjust = 1)
-    )
+  drake %>%
+  mutate(
+    date = as.Date(date),
+    title = as.character(title),
+    title = ifelse(str_detect(title, pattern = "Cake /"), "Pound Cake", title),
+    title = as.factor(title)
+  ) %>%
+  # Limit to songs where the
+  # main artist was, in fact, Drake.
+  filter(artist == "Drake") %>%
+  ggplot() +
+  geom_point(aes(x=reorder(title, desc(views)),
+                 y=date, size=views/1e6, colour=album), shape=1) +
+  scale_size_continuous(labels = scales::comma) +
+  scale_colour_discrete(labels= c("Views", "Scary Hours", "Nothing Was the Same", "IYRTITL", "More Life", "Take Care")) +
+  labs(x ="Song Title", y = "Time", size="Genius\nViews\n(Millions)", colour="Album") +
+  ggtitle("Drake Song Results from the Genius API") +
+  theme_minimal(base_size = 8) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
 
 
 ## Save
