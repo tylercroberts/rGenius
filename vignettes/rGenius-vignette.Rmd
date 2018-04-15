@@ -22,6 +22,11 @@ Genius is a website that allows users to provide annotations and interpretation 
 
 This R package wraps the Genius API and provides some interesting data extraction.
 
+# Get an API Key
+
+To get an access token to the Genius API, go to this link: [genius.com/api-clients/new](https://genius.com/api-clients/new), and fill out the form. You only need to provide the name of your app and an app website (the app website can even be https://example.com). After saving, you can get the access token by clicking on "Generate Access Token". 
+
+
 # **get_song()** 
 
 **Introduction**
@@ -48,8 +53,8 @@ get_song(song_id, access_token)
 ## Example
 
 ```
-# access_token <- your_token
-get_song(12,access_token)
+access_token <- "your_token"
+get_song(12, access_token)
 ```
 
 # **get_songs()** 
@@ -80,9 +85,10 @@ get_songs(song_ids, access_token, verbose=TRUE)
 ## Example
 
 ```
-# access_token <- your_token
+access_token <- "your_token"
 list_song <- c(12,13,14,15)
-get_songs(list_song,access_token,TRUE)
+get_songs(list_song, access_token) %>% 
+  select(id, title, artist, album, date, views)
 ```
 
 # **search_song()** 
@@ -115,8 +121,9 @@ search_song(song_title, access_token,n_per_page=20, verbose=FALSE)
 ## Example
 
 ```
-# access_token <- your_token
-search_song("Today was a fairy tale",access_token,20,TRUE)
+access_token <- "your_token"
+search_song("Titanium", access_token, 10, verbose = TRUE) %>% 
+  select(id, title, artist, album, date)
 ```
 
 # **get_artist()** 
@@ -145,8 +152,9 @@ get_artist(artist_id, access_token)
 ## Example
 
 ```
-# access_token <- your_token
-get_artist(12,access_token)
+access_token <- "your_token"
+get_artist(13, access_token) %>% 
+  select(id, alternate_name, facebook_name, instagram_name)
 ```
 
 # **get_song_from_artists()** 
@@ -179,6 +187,23 @@ get_song_from_artists(artist_name, access_token,n_per_page=20, verbose=FALSE)
 ## Example
 
 ```
-# access_token <- your_token
-get_song_from_artists("kanye", access_token, 20)
+access_token <- "your_token"
+katty <- get_song_from_artists("katty%20perry", access_token, 20)
+
+## Filter several album versions to one version:
+katty$album <- as.character(katty$album)
+katty$album[katty$album == "Teenage Dream: The Complete Confection"] <- "Teenage Dream"
+katty$album <- as.factor(katty$album)
+
+## Bar plot of Katy Perry's album popularity over time
+katty %>% 
+  filter(artist == "Katy Perry") %>% 
+  mutate(date = as.Date(date)) %>% 
+  group_by(album) %>% 
+  summarise(view = sum(views), date = max(date)) %>% 
+  ggplot() +
+    geom_bar(aes(x = reorder(album, date), y = view, fill = date), stat = "identity") +
+  labs(x ="Albums", y = "Views", title = "Katy Perry Album Results from API") +
+  theme_light()
 ```
+
