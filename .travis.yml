@@ -4,16 +4,18 @@ dist: trusty
 warnings_are_errors: false
 r_github_packages:
   - r-lib/covr
-  - jimhester/lintr
 notifications:
     on_success: never
     on_failure: never
 after_success:
   - Rscript -e 'covr::codecov()'
-env:
-  LINTR_COMMENT_BOT=false
 
-env:
-  global:
-  - R_BUILD_ARGS=" --no-build-vignettes --no-manual "  ## https://github.com/ANTsX/ANTsRCore/blob/master/.travis.yml
-  - R_BUILD_ARGS=" --as-cran --ignore-vignettes"
+matrix:
+  include:
+    - os: osx  ## Block testing vignettes. SOURCE: https://github.com/HenrikBengtsson/illuminaio/blob/master/.travis.yml
+      r: release
+      latex: false
+      r_build_args: --no-build-vignettes  ## WORKAROUND: sectsty.sty missing
+      r_check_args: --as-cran --ignore-vignettes
+      env: NB='w/out vignettes' ## Just a label
+      env: LINTR_COMMENT_BOT=false
