@@ -181,7 +181,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 
 #' Search and download results for a song.
 #'
-#' @description Obtain nformation from the Genius API about an artist.
+#' @description Obtain information from the Genius API about an artist.
 #' There can be several songs returned if the name appears in several
 #' songs' title in the API.
 #'
