@@ -1,50 +1,69 @@
 # Utils
 
+
+#' URL Encoder.
+#'
+#' @description Encode a character string URI that has
+#' declared marked encodings to a URL.
+#'
+#' @param string any string
+#'
+#' @return the input encoded as a URL.
+#'
 #' @keywords internal
+#' @noRd
 utf8_to_html <- function(string) {
-  #' Encode a URI `string` that has
-  #' declared marked encodings to UTF-8.
-  #'
-  #' @param string : a string
-  #'
-  #' @return : `out`: `string` encoded.
-  #'
-  out <- stri_enc_toutf8(string) %>%
-    url_encode() %>%
-    toupper()
-  return(out)
+    out <- stringi::stri_enc_toutf8(string) %>%
+      urltools::url_encode() %>%
+      toupper()
+    return(out)
 }
 
 
+#' Field Object Check.
+#'
+#' @description Check that the input is not NULL.
+#' If so, return NaN, otherwise return the input 'as is'.
+#' In other words, this just converts NULLs to NaNs, otherwise
+#' the input is returned unaltered.
+#'
+#' @param field the attribute from the yield of \code{.get_payload()}.
+#'
+#' @return NaN if the input is NULL, otherwise the input.
+#'
 #' @keywords internal
+#' @noRd
 get_field <- function(field) {
-  #' Check that `field` is not None,
-  #' otherwise return `field`
-  #'
-  #' @param field : character string
-  #'
-  #' @return : field or NaN if `Field` is `NULL`.
-  #'
-  if (is.null(field)){
-    return(NaN)
-  }
-  return(field)
+    if (is.null(field)){
+      return(NaN)
+    }
+    return(field)
 }
 
+
+#' Get a data payload from the Genius API.
+#'
+#' @description get the contents of a request to the
+#' genius API using a given url and access_token.
+#'
+#' @param url a formated request for the Genius API.
+#'
+#' @param access_token the user's (your) access token to the Genius API.
+#' For more detail about how to get it, see section Details
+#'
+#' @return the cotents of the request.
+#'
 #' @keywords internal
+#' @noRd
 .get_payload <- function(url, access_token){
-    #' Get Payload from the Genius API.
-    #'
-    #' @param url : API URL for Genius.
-    #'
-    r <- GET(
+    r <- httr::GET(
       url,
-      add_headers(
+      httr::add_headers(
         "Accept" = "application/json",
         "Host" = "api.genius.com",
-        "Authorization" = glue("Bearer {access_token}")
+        "Authorization" = glue::glue("Bearer {access_token}")
       )
     )
-    out <- content(r, "parsed")
+    out <- httr::content(r, "parsed")
     return(out)
 }

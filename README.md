@@ -12,11 +12,9 @@ Created by</a></h5>
 
 <h4 align="center"><a>
 
-[Tyler Roberts](https://github.com/tylercroberts/)  •  [Maud Boucherit](https://github.com/MaudBoucherit)  •  [Duong Vu](https://github.com/DuongVu39) &nbsp;&nbsp;•  [Tariq Hassan](https://github.com/TariqAHassan) &nbsp;  
+[Tyler Roberts](https://github.com/tylercroberts/) • [Maud Boucherit](https://github.com/MaudBoucherit) • [Duong Vu](https://github.com/DuongVu39) • [Tariq Hassan](https://github.com/TariqAHassan).
 
 </a></h4>
-
-<br>
 
 <h4 align="center"><a>
 
@@ -29,11 +27,6 @@ Created by</a></h5>
 
 <h1></h1>
 
-<h4 align="center">
-  <a href="#main-features">Main Features</a> &nbsp;&nbsp;&nbsp;•  <a href="#Usage">Usage</a> &nbsp;&nbsp;&nbsp;•  <a href="#Dependencies">Dependencies</a> &nbsp;&nbsp;&nbsp;•  <a href="#Installation">Installation</a> &nbsp;&nbsp;&nbsp;&nbsp;
-
-</h4>
-
 ## Overview
 
 [Genius](http://genius.com/) is a website that allows users to provide annotations and interpretation of song lyrics, news stories, sources, poetry, and other documents.
@@ -42,16 +35,19 @@ This R package wraps the Genius API ([here](https://genius.com/)) and provides s
 
 ### Some examples of the package usage:
 
-Popularity of some of Kanye West's songs:   
-![](img/kanye.png)
+Popularity of some Drake songs:   
+
+![](img/drake.png)
 
 Popularity of Karry Perry's albums over time:   
-![](img/katty.png)
 
-Number of contributors to the lyrics by number of views for some rock songs:   
+![](img/katy.png)
+
+Number of contributors to the lyrics by number of views for some rock songs:
+   
 ![](img/rock.png)
 
-Code for these above plots could be found in the [example folder](https://github.com/tylercroberts/rGenius/tree/master/examples)
+Code for these above plots could be found in the [`/examples`](https://github.com/tylercroberts/rGenius/tree/master/examples) folder.
 
 ## Main Features
 
@@ -83,17 +79,13 @@ Below are some functions that has been developed in the package:
 
   - Return a dataframe including all information
 
-    ​
+## Usage Example
 
-
-
-## Usage
-
-```R
-elton <- get_song_from_artists("elton", access_token, 6)
+```r
+elton <- get_song_from_artists("elton", access_token=YOUR_ACCESS_TOKEN, n_per_page=6)
 elton %>% 
-  select(title, artist, date, views, album) %>% 
-  head()
+    select(title, artist, date, views, album) %>% 
+    head()
 ```
 
 |      | title                                    | artist     | date       | views  | album                                    |
@@ -105,7 +97,20 @@ elton %>%
 | 5    | Can You Feel the Love Tonight (End Title) | Elton John | 1994-05-12 | 46823  | Rocket Man - The Definitive Hits (Australian Tour Edition 2011) |
 | 6    | Elton John                               | NA         | 2017-12-01 | 32719  | NA                                       |
 
+For more, see the examples and/or the vignettes directory.
 
+## Installation from Source
+
+To install the package, simply type the code below in the console:
+
+```r
+devtools::load_all()
+devtools::install_github("tylercroberts/rGenius")
+```
+
+## API Key
+
+To get an access token to the Genius API, go to this link: [genius.com/api-clients/new](https://genius.com/api-clients/new), and fill out the form. You only need to provide the name of your app and an app website (the app website can even be https://example.com). After saving, you can get the access token by clicking on "Generate Access Token". 
 
 ## Dependencies
 
@@ -115,18 +120,11 @@ elton %>%
 - [readr](https://github.com/tidyverse/readr): Read flat files (csv, tsv, fwf) into R
 - [glue](https://github.com/tidyverse/glue): Glue strings to data in R.
 
+## Getting Started
 
-
-## Installation from sources
-
-To install the package, simply type the code below in the console:
-
-```R
-devtools::load_all()
-devtools::install_github("tylercroberts/rGenius")
-```
-
-
+To get started, we encourage you to review our vignette, located in [/vignettes](/vignettes).
+Our code has also been extensively documented, so, as with any other package, you can learn more
+about a `rGenius` function by simply entering `?func` in your R console, e.g., `?get_song`.
 
 ## Contributing to rGenius
 
