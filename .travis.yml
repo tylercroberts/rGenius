@@ -16,7 +16,7 @@ env:
 
 matrix:
   include:
-    - os: osx  ## Souce: https://github.com/HenrikBengtsson/illuminaio/blob/master/.travis.yml
+    - os: osx  ## Block testing vignettes. SOURCE: https://github.com/HenrikBengtsson/illuminaio/blob/master/.travis.yml
       r: release
       latex: false
       r_build_args: --no-build-vignettes  ## WORKAROUND: sectsty.sty missing
