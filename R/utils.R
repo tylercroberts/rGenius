@@ -11,6 +11,7 @@
 #' @return the input encoded as a URL.
 #'
 #' @keywords internal
+#' @noRd
 utf8_to_html <- function(string) {
     out <- stringi::stri_enc_toutf8(string) %>%
       urltools::url_encode() %>%
@@ -31,6 +32,7 @@ utf8_to_html <- function(string) {
 #' @return NaN if the input is NULL, otherwise the input.
 #'
 #' @keywords internal
+#' @noRd
 get_field <- function(field) {
     if (is.null(field)){
       return(NaN)
@@ -52,6 +54,7 @@ get_field <- function(field) {
 #' @return the cotents of the request.
 #'
 #' @keywords internal
+#' @noRd
 .get_payload <- function(url, access_token){
     r <- httr::GET(
       url,
