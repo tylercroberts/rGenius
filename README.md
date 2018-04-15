@@ -47,7 +47,7 @@ Number of contributors to the lyrics by number of views for some rock songs:
    
 ![](img/rock.png)
 
-Code for these above plots could be found in the [`/example`](https://github.com/tylercroberts/rGenius/tree/master/examples) folder.
+Code for these above plots could be found in the [`/examples`](https://github.com/tylercroberts/rGenius/tree/master/examples) folder.
 
 ## Main Features
 
