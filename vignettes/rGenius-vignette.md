@@ -329,7 +329,7 @@ katy <-
 ```
 
 In our last step before plotting, let’s say that we’re only interested
-in three of her albums (our collective favorites): *Prism* and
+in two of her albums (our collective favorites): *Prism* and
 *Witness*.
 
 ``` r
