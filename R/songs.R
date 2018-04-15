@@ -35,9 +35,6 @@ source("R/utils.R")
 #'
 #' ## A Single song IDs:
 #' get_song(8439, access_token=YOUR_TOKEN_GOES_HERE)
-#'
-#' ## Multiple song IDs:
-#' get_songs(c(3846, 9869, 2273), access_token=YOUR_TOKEN_GOES_HERE)
 #' }
 #'
 #' @seealso \code{\link{get_artist}}, \code{\link{search_song}}, \code{\link{get_songs_from_artist}}
@@ -92,6 +89,7 @@ get_song <- function(song_id, access_token) {
 #' for all songs in itera.
 #'
 #' @keywords internal
+#' @noRd
 .fetch_engine <- function(res, itera, access_token, verbose){
     if (verbose){
         pb <- utils::txtProgressBar(min=0, max=length(itera), initial=0)
@@ -138,6 +136,14 @@ get_song <- function(song_id, access_token) {
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
 #'
+#' @examples
+#' \dontrun{
+#' library(rGenius)
+#'
+#' ## Multiple song IDs:
+#' get_songs(c(3846, 9869, 2273), access_token=YOUR_TOKEN_GOES_HERE)
+#' }
+#'
 #' @export
 get_songs <- function(song_ids, access_token, verbose=TRUE) {
     # Expected columns: id, title, artist, featured_artists
@@ -179,7 +185,8 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 #' }
 #'
 #' @keywords internal
-.song_get <- function(url, access_token, verbose){
+#' @noRd
+.song_url_get <- function(url, access_token, verbose){
     # Get the query results form Genius' servers.
     songs <- .get_payload(url=url, access_token=access_token)
     # Harvest song ids from `song`.
@@ -238,7 +245,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 #' @export
 search_song <- function(song_title, access_token,
                         n_per_page=20, verbose=FALSE) {
-    res <- .song_get(
+    res <- .song_url_get(
         url=glue::glue("api.genius.com/search?q={song_title}&per_page={n_per_page}"),
         access_token=access_token,
         verbose=verbose
@@ -291,7 +298,7 @@ search_song <- function(song_title, access_token,
 #' @export
 get_song_from_artists <- function(artist_name, access_token,
                                   n_per_page=20, verbose=FALSE){
-    res <- .song_get(
+    res <- .song_url_get(
         url=glue::glue("api.genius.com/search?q={artist_name}&per_page={n_per_page}"),
         access_token=access_token,
         verbose=verbose
