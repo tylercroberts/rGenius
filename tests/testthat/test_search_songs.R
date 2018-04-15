@@ -1,10 +1,11 @@
 context("songs.R")
 
-N <- 10
+N <- 5
 
 test_that(
   "search_song() output is the specified length", {
     expected <- N
-    actual <- length(search_song("Layla", Sys.getenv("GENIUS_SECRET"), 10))
+    get <- search_song("Layla", access_token=Sys.getenv("GENIUS_SECRET"), n_per_page=5)
+    actual <- nrow(get)
     expect_equal(actual, expected)
-  })
+})
