@@ -45,7 +45,7 @@ get_artist <- function(artist_id, access_token) {
       "alternate_name" = get_field(artist$response$artist$alternate_names[[1]]),
       "facebook_name" = get_field(artist$response$artist$facebook_name),
       "instagram_name" = get_field(artist$response$artist$instagram_name),
-      "twitter_name" = get_field(artist$response$artist$twitter_name),
+      "twitter_name" = get_field(artist$response$artist$twitter_name)
     )
     return(res)
 }

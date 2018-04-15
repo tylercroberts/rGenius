@@ -1,7 +1,7 @@
 context("songs.R")
 
 N <- 10
-ARTIST_NAME <- "elton"
+ARTIST_NAME <- "drake"
 
 
 test_that(
