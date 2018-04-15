@@ -35,7 +35,7 @@ This R package wraps the Genius API ([here](https://genius.com/)) and provides s
 
 ### Some examples of the package usage:
 
-Popularity of some of Drake songs:   
+Popularity of some Drake songs:   
 
 ![](img/drake.png)
 
