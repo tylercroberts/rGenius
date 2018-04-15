@@ -23,7 +23,7 @@ source("R/utils.R")
 #'   \item{album}{the song's album}
 #'   \item{date}{the song's released date}
 #'   \item{views}{the number of views for this song on the Genius website}
-#'   \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+#'   \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
 #'   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
@@ -135,7 +135,7 @@ get_song <- function(song_id, access_token) {
 #'   \item{album}{the song's album}
 #'   \item{date}{the song's released date}
 #'   \item{views}{the number of views for this song on the Genius website}
-#'   \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+#'   \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
 #'   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
@@ -183,7 +183,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 #'   \item{album}{the song's album}
 #'   \item{date}{the song's released date}
 #'   \item{views}{the number of views for this song on the Genius website}
-#'   \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+#'   \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
 #'   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
@@ -231,7 +231,7 @@ get_songs <- function(song_ids, access_token, verbose=TRUE) {
 #'   \item{album}{the song's album}
 #'   \item{date}{the song's released date}
 #'   \item{views}{the number of views for this song on the Genius website}
-#'   \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+#'   \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
 #'   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
@@ -284,7 +284,7 @@ search_song <- function(song_title, access_token,
 #'   \item{album}{the song's album}
 #'   \item{date}{the song's released date}
 #'   \item{views}{the number of views for this song on the Genius website}
-#'   \item{contributors}{the number of contibutors to the lyrics of this songs on the Genius website}
+#'   \item{contributors}{the number of contributors to the lyrics of this songs on the Genius website}
 #'   \item{transcribers}{the number of transcribers to the lyrics of this songs on the Genius website}
 #'   \item{concurrents}{the number of people looking at the page whenever the API was last updated}
 #' }
