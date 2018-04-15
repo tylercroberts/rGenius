@@ -35,11 +35,11 @@ This R package wraps the Genius API ([here](https://genius.com/)) and provides s
 
 ### Some examples of the package usage:
 
-Popularity of some of Kanye West's songs:   
-![](img/kanye.png)
+Popularity of some of Drake songs:   
+![](img/drake.png)
 
 Popularity of Karry Perry's albums over time:   
-![](img/katty.png)
+![](img/katy.png)
 
 Number of contributors to the lyrics by number of views for some rock songs:   
 ![](img/rock.png)
