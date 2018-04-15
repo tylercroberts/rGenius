@@ -5,28 +5,48 @@ library(tidyverse)
 ## Set the access token
 access_token <- read_lines("access_token.txt")[1]
 
-## Get all songs with the search Katty
-katty <- get_song_from_artists("katty", access_token, 20)
+## Search and Download results for Katy Pery
+katy <- get_song_from_artists(
+    artist_name="katy%20perry",
+    access_token=access_token,
+    n_per_page=50,
+    verbose=TRUE) %>%
+    ## `get_song_from_artists()` faithfully returns us the results
+    ## from the Genius API. We'll have to filter The data to ensure
+    ## we only get songs where the *main* artist was Katy Pery.
+    filter(artist=="Katy Perry")
 
-## Filter several album versions to one version:
-katty$album <- as.character(katty$album)
-katty$album[katty$album == "Teenage Dream: The Complete Confection"] <- "Teenage Dream"
-katty$album <- as.factor(katty$album)
+## Clean Data Types
+katy <-
+  katy %>%
+  mutate(
+    date = as.Date(date),
+    album = str_trim(as.character(album))
+)
 
-## Bar plot of Katy Perry's album popularity over time
+## Filter
+katy_p_favs <- c("Prism", "Witness")
 
-katty %>% 
-  filter(artist == "Katy Perry") %>% 
-  mutate(date = as.Date(date)) %>% 
-  group_by(album) %>% 
-  summarise(view = sum(views), date = max(date)) %>% 
-  ggplot() +
-  geom_bar(aes(x = reorder(album, date), y = view, fill = date), stat = "identity")+
-  labs(x ="Albums", y = "Views", 
-       title = "Katy Perry Album Results from API") +
-  theme_light()
+katy <-
+  katy %>%
+  filter(album %in% katy_p_favs) %>%
+  mutate(album = as.factor(album))
+
+## Build Plot.
+katy_plot <-
+    katy %>%
+    mutate(views=views/1e6) %>%
+    ggplot(aes(x=date, y=views, color=album)) +
+    geom_line() +
+    facet_grid(~album, scales="free_x") +
+    scale_y_continuous(labels = scales::comma) +
+    ## Standardize Date Format.
+    ## See: https://stackoverflow.com/a/48510303
+    scale_x_date(date_labels = "%b-%Y") +
+    labs(x="\nDate", y="Views (Millions)") +
+    ggtitle("Our Favorite Katy Perry Albums", subtitle="Rise and Fall") +
+    theme_minimal() +
+    theme(legend.position="none")
 
 
-
-
-
+ggsave("imgs/katy.png", plot=katy_plot, dpi=300)
