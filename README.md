@@ -96,7 +96,7 @@ elton %>%
 | 6    | Elton John                               | NA         | 2017-12-01 | 32719  | NA                                       |
 
 
-## Installation from sources
+## Installation from Source
 
 To install the package, simply type the code below in the console:
 
