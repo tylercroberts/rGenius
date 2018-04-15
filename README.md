@@ -79,14 +79,13 @@ Below are some functions that has been developed in the package:
 
   - Return a dataframe including all information
 
-
-## Usage
+## Usage Example
 
 ```r
-elton <- get_song_from_artists("elton", access_token, 6)
+elton <- get_song_from_artists("elton", access_token=YOUR_ACCESS_TOKEN, n_per_page=6)
 elton %>% 
-  select(title, artist, date, views, album) %>% 
-  head()
+    select(title, artist, date, views, album) %>% 
+    head()
 ```
 
 |      | title                                    | artist     | date       | views  | album                                    |
@@ -98,6 +97,7 @@ elton %>%
 | 5    | Can You Feel the Love Tonight (End Title) | Elton John | 1994-05-12 | 46823  | Rocket Man - The Definitive Hits (Australian Tour Edition 2011) |
 | 6    | Elton John                               | NA         | 2017-12-01 | 32719  | NA                                       |
 
+For more, see the examples and/or the vignettes directory.
 
 ## Installation from Source
 
