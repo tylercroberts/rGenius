@@ -23,7 +23,7 @@ test_that(
 
 test_that(
   "get_song_from_artists() output is a DataFrame", {
-    get <- get_songs_from_artists(
+    get <- get_song_from_artists(
         ARTIST_NAME, access_token=Sys.getenv("GENIUS_SECRET"),
         n_per_page=1, verbose=FALSE
     )
