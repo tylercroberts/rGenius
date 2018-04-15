@@ -117,6 +117,12 @@ To get an access token to the Genius API, go to this link: [genius.com/api-clien
 - [readr](https://github.com/tidyverse/readr): Read flat files (csv, tsv, fwf) into R
 - [glue](https://github.com/tidyverse/glue): Glue strings to data in R.
 
+## Getting Started
+
+To get started, we encourage you to review our vignette, located in [/vignettes](/vignettes).
+Our code has also been extensively documented, so, as with any other package, you can learn more
+about a `rGenius` function by simply entering `?func` in your R console, e.g., `?get_song`.
+
 ## Contributing to rGenius
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome.
