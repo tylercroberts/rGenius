@@ -12,11 +12,9 @@ Created by</a></h5>
 
 <h4 align="center"><a>
 
-[Tyler Roberts](https://github.com/tylercroberts/)  •  [Maud Boucherit](https://github.com/MaudBoucherit)  •  [Duong Vu](https://github.com/DuongVu39) &nbsp;&nbsp;•  [Tariq Hassan](https://github.com/TariqAHassan) &nbsp;  
+[Tyler Roberts](https://github.com/tylercroberts/) • [Maud Boucherit](https://github.com/MaudBoucherit) • [Duong Vu](https://github.com/DuongVu39) • [Tariq Hassan](https://github.com/TariqAHassan).
 
 </a></h4>
-
-<br>
 
 <h4 align="center"><a>
 
@@ -28,11 +26,6 @@ Created by</a></h5>
 </a></h4>
 
 <h1></h1>
-
-<h4 align="center">
-  <a href="#main-features">Main Features</a> &nbsp;&nbsp;&nbsp;•  <a href="#Usage">Usage</a> &nbsp;&nbsp;&nbsp;•  <a href="#Dependencies">Dependencies</a> &nbsp;&nbsp;&nbsp;•  <a href="#Installation">Installation</a> &nbsp;&nbsp;&nbsp;&nbsp;
-
-</h4>
 
 ## Overview
 
@@ -83,9 +76,6 @@ Below are some functions that has been developed in the package:
 
   - Return a dataframe including all information
 
-    ​
-
-
 
 ## Usage
 
@@ -106,17 +96,6 @@ elton %>%
 | 6    | Elton John                               | NA         | 2017-12-01 | 32719  | NA                                       |
 
 
-
-## Dependencies
-
-- [R](https://cran.r-project.org/) >= 3.4.3
-- [dplyr](https://dplyr.tidyverse.org/): grammar of data manipulation
-- [httr](https://github.com/r-lib/httr): a friendly http package for R
-- [readr](https://github.com/tidyverse/readr): Read flat files (csv, tsv, fwf) into R
-- [glue](https://github.com/tidyverse/glue): Glue strings to data in R.
-
-
-
 ## Installation from sources
 
 To install the package, simply type the code below in the console:
@@ -125,8 +104,18 @@ To install the package, simply type the code below in the console:
 devtools::load_all()
 devtools::install_github("tylercroberts/rGenius")
 ```
+    ​
+## API Key
 
+To get an access token to the Genius API, go to this link: [genius.com/api-clients/new](https://genius.com/api-clients/new), and fill out the form. You only need to provide the name of your app and an app website (the app website can even be https://example.com). After saving, you can get the access token by clicking on "Generate Access Token". 
 
+## Dependencies
+
+- [R](https://cran.r-project.org/) >= 3.4.3
+- [dplyr](https://dplyr.tidyverse.org/): grammar of data manipulation
+- [httr](https://github.com/r-lib/httr): a friendly http package for R
+- [readr](https://github.com/tidyverse/readr): Read flat files (csv, tsv, fwf) into R
+- [glue](https://github.com/tidyverse/glue): Glue strings to data in R.
 
 ## Contributing to rGenius
 
